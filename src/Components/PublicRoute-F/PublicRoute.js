@@ -5,12 +5,13 @@ const PublicRoute = ({children,...routeProps}) => {//Apart from {children} decon
    
 const profile= false;
 if(profile){
-    return <Redirect to="/home"/>
+    return <Redirect to="/"/>
 
 }
 
     return (
-        <Route {...routeProps}>{children}</Route>
+        <Route {...routeProps}>{children}
+        </Route>
     )
 }
 

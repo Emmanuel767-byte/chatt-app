@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Redirect , Route} from 'react-router';
 
@@ -16,4 +17,4 @@ if(!profile){//if no user/ profile detected redirect to sign in page
     )
 }
 
-export default PrivateRoute
+export default PrivateRoute;
