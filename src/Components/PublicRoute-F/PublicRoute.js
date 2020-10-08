@@ -9,7 +9,6 @@ if(profile){
 
 }
 
-
     return (
         <Route {...routeProps}>{children}</Route>
     )
