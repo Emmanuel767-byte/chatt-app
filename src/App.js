@@ -7,17 +7,22 @@ import SignIn from './Pages/SignIn-F/SignIn';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import PublicRoute from './Components/PublicRoute-F/PublicRoute'
 import Home from './Pages/Home-F/Home'
+import {ProfileProvider} from './context/profileContext'
 
-// https://chat-app-74c6e.firebaseapp.com/__/auth/handler  for firebase facebook 
+// https://chat-app-91ae6.firebaseapp.com/__/auth/handler for firebase facebook 
 function App() {
-  return <Switch>
-    <PublicRoute path="/signin">
-      <SignIn/>
-    </PublicRoute>  
-      <PrivateRoute path="/">
-        <Home/>
-      </PrivateRoute>
-  </Switch>
+  return (
+  <ProfileProvider>
+      <Switch>
+        <PublicRoute path="/signin">
+          <SignIn/>
+        </PublicRoute>  
+          <PrivateRoute path="/">
+            <Home/>
+          </PrivateRoute>
+      </Switch>
+  </ProfileProvider>
+)
 }
 
 export default App;

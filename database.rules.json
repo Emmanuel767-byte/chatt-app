@@ -1,4 +1,4 @@
-{ 
+{
   "rules": {
     "profiles": {
       "$user_id":{ 
@@ -6,7 +6,8 @@
         ".write": "$user_id=== auth.uid"
       }
   },
-    ".read": false,
-    ".write": false
+
+    ".read": "auth != null",
+    ".write": "auth != null"
   }
 }

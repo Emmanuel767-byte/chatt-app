@@ -4,7 +4,6 @@ import {auth, db} from '../../misc/firebase';
 import firebase from "firebase/app";
 
 const SignIn = () => {
-
     const singInWithProvider= async provider=>{
         try{
             const { additionalUserInfo, user}= await auth.signInWithPopup(provider)
@@ -46,7 +45,7 @@ const SignIn = () => {
                             <Button block color="blue" onClick={onFacebookSignin}>
                                 <Icon icon="facebook"/> Continue With Facebook
                             </Button>
-                            <Button block color="blue" onClick={onGooglesignin}>
+                            <Button block color="green" onClick={onGooglesignin}>
                                 <Icon icon="google" /> Continue With Google
                             </Button>
                         </div>
